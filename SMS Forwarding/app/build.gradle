@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    // AIDE সাধারণত SDK 28 বা তার নিচে ভালো কাজ করে
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.example.smsforwarder"
+        minSdkVersion 19
+        // Target SDK 26 রাখা হয়েছে SMS পারমিশনের সুবিধার জন্য
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    
+    // এই লাইনটি যোগ করা হয়েছে যাতে AppCompat এবং Support Library কাজ করে
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+}
+
